@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_order_form_inherit_commission" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.commission</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <field name="partner_id" position="after">
+                <field name="is_agent_sale" />
+            </field>
+            <xpath expr="//page[@name='order_lines']" position="before">
+                <page string="Commission">
+                    <group col="2" invisible="not is_agent_sale">
+                        <field name="agent_id"/>
+                        <field name="principal_id"/>
+                        <field name="commission_rate"/>
+                        <field name="commission_amount" readonly="1"/>
+                        <field name="commission_status" readonly="1"/>
+                        <field name="commission_invoice_id" readonly="1"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//button[@name='action_quotation_send']" position="after">
+                <button name="action_create_commission_invoice" type="object" string="Make Invoice" class="btn-primary" invisible="not is_agent_sale" states="sale"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
