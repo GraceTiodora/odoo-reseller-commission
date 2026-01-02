@@ -38,7 +38,7 @@ SO: Rp 10.000.000, Rate: 10%
 → PT B revenue: 10.000.000
 ```
 
-## Testingg
+## Testing
 
 24 tests, jalanin: `odoo-bin --test-enable -i reseller_commission`
 - 8 test partner commission
