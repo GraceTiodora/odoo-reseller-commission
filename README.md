@@ -2,6 +2,22 @@
 
 Catatan modul komisi agent untuk Odoo 18. PSAK 72 compliant - agent cuma catat komisi, bukan full transaction.
 
+## Installation
+
+```bash
+# Clone repository
+git clone https://github.com/GraceTiodora/odoo-reseller-commission
+
+# Copy module ke Odoo addons folder
+cp -r odoo-reseller-commission/custom_addons/reseller_commission /path/to/odoo/addons/
+
+# Install module
+odoo-bin -d your_database -i reseller_commission
+
+# Run tests
+odoo-bin -d your_database --test-enable -i reseller_commission
+```
+
 ## Konsep
 
 ```
