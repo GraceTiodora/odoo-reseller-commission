@@ -6,11 +6,10 @@ Catatan modul komisi agent untuk Odoo 18. PSAK 72 compliant - agent cuma catat k
 
 ```
 Principal (PT B) ─> Punya barang
-    ↓
     ├─ Customer (Toko Bibit) ─> Bayar ke PT B  
     └─ Agent (PT A) ──> Bantu jual → Dapat komisi
 
-PT A Revenue: Komisi doang (PSAK 72 ✓)
+PT A Revenue: Komisi doang (PSAK 72)
 PT B Revenue: Nilai jual penuh
 ```
 

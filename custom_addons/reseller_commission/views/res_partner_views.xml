@@ -7,9 +7,10 @@
         <field name="arch" type="xml">
 
             <xpath expr="//page[@name='sales_purchases']" position="inside">
-                <group string="Commission">
+                <group string="Commission Settings">
+                    <field name="is_agent"/>
                     <field name="is_principal"/>
-                    <field name="commission_rate" invisible="is_principal"/>
+                    <field name="commission_rate" invisible="not is_agent"/>
                 </group>
             </xpath>
 

@@ -22,7 +22,7 @@
                 </page>
             </xpath>
             <xpath expr="//button[@name='action_quotation_send']" position="after">
-                <button name="action_create_commission_invoice" type="object" string="Make Invoice" class="btn-primary" invisible="not is_agent_sale" states="sale"/>
+                <button name="action_create_commission_invoice" type="object" string="Make Invoice" class="btn-primary" invisible="not is_agent_sale or state != 'sale'"/>
             </xpath>
 
         </field>
